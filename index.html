@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max S. Johnson - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Matrix Effect -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Main Content -->
+    <header class="hero">
+        <h1>Max S. Johnson</h1>
+        <p>Cybersecurity Enthusiast | IT Professional</p>
+        <a href="about.html" class="button">About Me</a>
+        <a href="#skills" class="button">View My Skills</a>
+
+    </header>
+
+    <section class="skills" id="skills">
+        <h2>My Cybersecurity Skills</h2>
+        <div class="skill"><h3>Penetration Testing</h3></div>
+        <div class="skill"><h3>Network Security</h3></div>
+        <div class="skill"><h3>Python & Scripting</h3></div>
+        <div class="skill"><h3>Cloud Security (AWS/Azure)</h3></div>
+        <div class="skill"><h3>Forensics & Threat Analysis</h3></div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:maxsjohnson225@gmail.com">maxsjohnson225@gmail.com</a></p>
+        <p>Phone: (919) 455-4929</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Max S. Johnson | Cybersecurity Portfolio</p>
+    </footer>
+
+    <!-- Matrix Effect Script -->
+    <script>
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function drawMatrixEffect() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#00FF00";
+            ctx.font = fontSize + "px monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrixEffect, 50);
+    </script>
+
+</body>
+</html>
