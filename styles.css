@@ -78,6 +78,7 @@ h2 {
     box-shadow: 0 0 10px #00FF00;
 }
 
+/* Gallery */
 .gallery {
     display: flex;
     justify-content: center;
@@ -98,7 +99,6 @@ h2 {
 .gallery img:hover {
     transform: scale(1.1);
 }
-
 
 /* Footer */
 footer {
