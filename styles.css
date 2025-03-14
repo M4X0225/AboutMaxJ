@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 
-/* Matrix Effect Canvas */
+/* Matrix Effect Canvas (Only on Home Page) */
 #matrixCanvas {
     position: fixed;
     top: 0;
@@ -19,18 +19,12 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background: rgba(0, 0, 0, 0.8);
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
 }
 
 .button {
@@ -50,7 +44,7 @@ body {
 
 /* Sections */
 section {
-    padding: 60px 20px;
+    padding: 50px 20px;
     background: rgba(0, 0, 0, 0.8);
     margin: 10px auto;
     max-width: 800px;
@@ -63,15 +57,48 @@ h2 {
     margin-bottom: 20px;
 }
 
-.skill {
-    background: rgba(0, 255, 0, 0.2);
+/* About Page */
+.about-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    background: rgba(0, 255, 0, 0.1);
     padding: 10px;
-    margin: 10px auto;
-    display: inline-block;
-    font-weight: bold;
     border-radius: 5px;
     box-shadow: 0 0 10px #00FF00;
 }
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #00FF00;
+    box-shadow: 0 0 10px #00FF00;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
 
 /* Footer */
 footer {
