@@ -100,7 +100,7 @@ h2 {
     transform: scale(1.1);
 }
 
-/* Skills Section - Updated to Match Gallery */
+/* Skills Section */
 .skills {
     display: flex;
     flex-direction: column;
@@ -109,19 +109,22 @@ h2 {
 }
 
 .skill {
-    width: 250px;
+    font-size: 1.5rem;
+    background: rgba(0, 255, 0, 0.1);
     padding: 15px;
-    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
     border: 2px solid #00FF00;
     box-shadow: 0 0 10px #00FF00;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .skill:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px #00FF00;
 }
+
 
 /* Footer */
 footer {
